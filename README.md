@@ -73,9 +73,6 @@ node server.js
 <hr>
 
 
-## Our Contributors ❤️✨
-
-[![Contributors](https://contrib.rocks/image?repo=springboardmentor106/RightResourceFit_Infosys_Internship_Oct2024_Team_04)](https://github.com/springboardmentor106/RightResourceFit_Infosys_Internship_Oct2024_Team_04/contributors)
 
 ## Support or Contact
 
