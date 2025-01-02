@@ -1,0 +1,5 @@
+
+User-agent: *
+Disallow: /private
+Allow: /
+Sitemap: https://rightresourcefit.onrender.com/sitemap.xml

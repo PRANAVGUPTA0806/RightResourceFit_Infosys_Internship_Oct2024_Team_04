@@ -1,0 +1,315 @@
+.manage-jobs-container {
+  display: flex;
+  background-image: url('/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.headi {
+  color: #fff;
+}
+
+.manage-jobs-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 230px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.manage-jobs-content h1 {
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.create-job-btn {
+  padding: 8px 12px;
+  /* position: absolute; */
+  bottom: -40px;
+  right: 20px;
+  display: block;
+  margin: 20px auto 0;
+  width: 200px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  background-color: #000000e0;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 35px;
+  border-radius: 8px;
+  margin-bottom: -20px;
+}
+
+.create-job-btn:hover {
+  background-color: #542eb3;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.jobCard {
+  background: rgba(255, 255, 255, 0.565);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 15px; /* Reduced padding for smaller width */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 550px; /* Set a smaller width */
+  max-width: 100%; /* Ensure it doesn't exceed container width */
+  margin: 0 auto; /* Center the card if needed */
+}
+
+
+.jobCard h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.jobCard p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.jobCard p strong {
+  color: #34495e;
+}
+
+
+/* Container styling */
+.job-actions {
+  display: flex; /* Align buttons in a row */
+  gap: 10px; /* Add spacing between buttons */
+  align-items: center; /* Vertically center buttons */
+  justify-content: flex-start; /* Align buttons to the left */
+  margin-top: 10px; /* Add some spacing above the button group */
+}
+
+/* Shared button styles */
+.action-btn {
+  width: 100px;
+  padding: 8px 16px; /* Add padding to make buttons more clickable */
+  border: none; /* Remove default button border */
+  border-radius: 4px; /* Round the corners of the button */
+  font-size: 13px; /* Set font size */
+  font-weight: bold; /* Make text bold */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: white; /* Default text color */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+/* Report button styles */
+.report-btn {
+  background-color: #f39c12; /* Orange background color */
+}
+
+.report-btn:hover {
+  background-color: #e67e22; /* Slightly darker orange on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Update button styles */
+.update-btn {
+  background-color: #542eb3; /* Blue background color */
+}
+
+.update-btn:hover {
+  background-color: #542eb3; /* Slightly darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Delete button styles */
+.delete-btn {
+  background-color: #e74c3c; /* Red background color */
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; /* Slightly darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Optional: Add focus styles for accessibility */
+.action-btn:focus {
+  outline: 2px solid #333; /* Visible outline for focused buttons */
+  outline-offset: 2px; /* Space between outline and button */
+}
+
+
+.as a{
+  color:#fff
+}
+
+
+
+.update-button {
+  
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 18px;
+  background-color: #542eb3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 20rem;
+}
+
+.cancel-btn {
+  padding: 8px 18px;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #e74c3c;
+}
+
+  /* Modal background overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px); /* Optional blur effect */
+}
+
+/* Modal container */
+.modal-container {
+  background: #fff;
+  padding: 20px;
+  /* border-radius: 8px; */
+  width: 90%;
+  max-width: 610px;
+  max-height: 100vh; /* Limit height */
+  overflow-y: auto; /* Allow vertical scroll if content overflows */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1001;
+}
+
+/* Close button */
+.modal-close-btn,
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  z-index: 1002;
+}
+
+/* Content within the modal */
+.modal-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Blur effect on main page when modal is open */
+.manage-jobs-content.blur {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+
+/* .manage-jobs-content {
+   filter: blur(5px); /* Apply blur effect when modal is open */
+
+.searchBar input {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.565);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+
+@media (max-width: 768px) {
+  .manage-jobs-content {
+    margin-left: 0px;
+  }
+  
+}
+@media (max-width: 1170px) {
+
+
+
+  .job-list {
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
+
+  
+}
+@media (max-width: 768px) {
+
+
+  .manage-jobs-content {
+    margin-left: 0; 
+    padding: 10px; 
+    margin-bottom: 40px;
+  }
+
+  .create-job-btn {
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    text-align: center;
+    margin-bottom: -20px;
+  }
+
+  .job-list {
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
+
+  .jobCard {
+    width: auto;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .searchBar input {
+    width: 100%; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+  }
+
+  .modal-container {
+    width: 95%; 
+    max-width: 480px; 
+    padding: 15px; 
+  }
+
+  .update-btn, .cancel-btn, .delete-btn {
+    padding: 10px; 
+    font-size: 12px;
+    /* margin-right: 130px;  */
+  }
+}

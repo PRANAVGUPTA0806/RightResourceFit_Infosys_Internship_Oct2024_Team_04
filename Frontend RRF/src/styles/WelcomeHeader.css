@@ -1,0 +1,53 @@
+.welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.565);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 220px;
+} 
+
+
+
+.welcome-text {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.welcome-text h1 {
+  margin: 2px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.welcome-text p {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #333; /* Adjust the text color */
+  text-align: center;
+}
+
+.welcome-image img {
+  width: 200px; /* Adjust the size of the image */
+  height: auto;
+  length: 500px;
+}
+
+@media (max-width: 768px) {
+  .welcome-header {
+    flex-direction: column;
+    text-align: center;
+    margin-left: -5%;
+  }
+
+  .welcome-image img {
+    width: 100px; /* Resize image for smaller screens */
+  }
+}
